@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mi primer proyecto",
-  description: "Mi primer proyecto con Next.js",
+  title: "Burritos for Busy People",
+  description: "Burritos gourmet listos en minutos, para gente ocupada.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
