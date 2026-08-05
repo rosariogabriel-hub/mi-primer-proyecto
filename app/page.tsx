@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BurritoCarousel from "./components/BurritoCarousel";
+import PedidoForm from "./components/PedidoForm";
 
 export default function Home() {
   return (
@@ -46,6 +47,8 @@ export default function Home() {
       </section>
 
       <BurritoCarousel />
+
+      <PedidoForm />
     </main>
   );
 }
