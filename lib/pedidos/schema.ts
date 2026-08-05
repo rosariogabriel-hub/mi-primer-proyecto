@@ -20,3 +20,25 @@ export const pedidoSchema = z.object({
 });
 
 export type PedidoInput = z.infer<typeof pedidoSchema>;
+
+export const ESTADOS = ["nuevo", "en_proceso", "completado", "cancelado"] as const;
+
+export const estadoSchema = z.enum(ESTADOS);
+
+export type Estado = (typeof ESTADOS)[number];
+
+export const ESTADO_LABELS: Record<Estado, string> = {
+  nuevo: "Nuevo",
+  en_proceso: "En proceso",
+  completado: "Completado",
+  cancelado: "Cancelado",
+};
+
+export type Pedido = {
+  id: number;
+  nombre_cliente: string;
+  telefono: string;
+  items_pedido: string;
+  estado: Estado;
+  fecha_creacion: string;
+};
